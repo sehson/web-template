@@ -1,0 +1,456 @@
+
+body {margin:0;font-family:Arial}
+
+/**********************************************************NAVBAR**************************************/
+
+/* Pozadina */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Izgled linkova */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Aktivna klasa na trenutnom linku */
+.active {
+  background-color: #056eba;
+  color: white;
+}
+
+
+.topnav .icon {
+  display: none;
+}
+
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+
+/**********************************************************GLAVNI SADRŽAJ STRANICE**************************************/
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
+  }
+  
+  /* Naslov stranice */
+  .header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: rgb(5, 126, 212);
+  }
+
+  .column {
+    float: left;
+    width: 33.33%;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .leftcolumn {   
+    float: left;
+    width: 75%;
+  }
+  
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/**********************************************************GRID 4 kolone**************************************/
+
+ 
+.kolona {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+
+.red {margin: 0 -5px;}
+
+
+.red:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .kolona {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.card-header {
+  overflow: hidden;
+  width: 100%;
+  max-height: 200px;
+}
+
+.card-header img{
+  width: 100%;
+}
+
+.card-content {
+  width: 85%;
+  margin: 35px auto;
+}
+
+.card-content h3 {
+  font-size: 25px;
+  margin-bottom: 0;
+  color: #303F9F;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-content h4 {
+  font-size: 14px;
+  margin-top: 5;
+  color: #FF5252;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-content p {
+  color: #727272;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  
+}
+
+.card-footer {
+  border-top: solid 1px #B6B6B6;
+  padding: 5px;
+}
+
+.card-footer ul {
+  padding: 0;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+.card-footer ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 5px;
+}
+
+.card-footer ul li i {
+  font-size: 1em;
+  color: #3F51B5;
+}
+  
+/**********************************************************FOOTER**************************************/
+  .footer {
+    padding: 10px;
+    text-align: center;
+    color: #f2f2f2;
+    font-size: 17px;
+    background: #333;
+    margin-top: 10px;
+  }
+
+  /**********************************************************FOOTER**************************************/
+  
+  /* Responzivni izgled - kada je zaslon display manji od 800px širine, neka dvije kolone budu jedna ispod druge */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+
+  /**********************************************************SEKCIJA O PODACIMA**************************************/
+  
+  .column {
+    float: left;
+    width: 25%;
+    padding: 0 5px;
+  }
+  
+  .row {margin: 0 -5px;}
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responzivnost kolona */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Izgled sekcije brojača podataka */
+  .podaci {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #056eba;
+    color: white;
+    margin-top: 20px;
+  }
+
+/**********************************************************PROFIL KARTICA**************************************/
+
+  .title {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+  }
+
+  .profil {
+    background-color: #056eba;
+    padding: 20px;
+    margin-top: 20px;
+ }
+
+ .podnaslov {
+  font-weight: bold;
+ }
+
+ .slika {
+  border: 2px solid rgb(241, 220, 33);
+}
+ 
+ .gumb {
+  background-color: rgb(241, 220, 33);
+  color: rgb(35, 34, 34);
+ }
+
+ .kontakt {
+  color: rgb(241, 220, 33);
+ }
+
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+  }
+  
+  button:hover, a:hover {
+    opacity: 0.7;
+  }
+
+/**********************************************************LOGIN FORMA**************************************/
+
+  form {
+    border: 3px solid #f1f1f1;
+  }
+  
+  
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  /**********************************************************GLAVNI GUMB**************************************/
+  
+  /* Izgled glavnog gumba na stranici */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 14px;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+
+
+  /**********************************************************TAB SADRŽAJ**************************************/
+
+
+  /* Izgled tab gumba */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+/* Promjena boje na prelazu preko gumba */
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Tab sadržaj */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+/* Tab sadržaj pojedinačno */
+#Banner1 {background-color: #056eba}
+#Banner2 {background-color:green;}
+#Banner3 {background-color:blue;}
+#Banner4 {background-color:orange;}
+
+
+/**********************************************************SKILLS SEKCIJA**************************************/
+
+* {box-sizing: border-box}
+
+
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.html {width: 40%; background-color: #6f0179;}
+.css {width: 50%; background-color: #2196F3;}
+.js {width: 10%; background-color: #f44336;}
